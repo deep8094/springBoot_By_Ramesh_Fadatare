@@ -1,14 +1,15 @@
 package com.brar.springBoot_By_Ramesh_Fadatare.service;
 
+import com.brar.springBoot_By_Ramesh_Fadatare.dto.UserDto;
 import com.brar.springBoot_By_Ramesh_Fadatare.entity.User;
 
 import java.util.List;
 
 public interface UserService {
-    User createUser(User user);
-    User getUserById(Long id);
-    List<User> getAllUsers();
-    User updateUser(User user);
-    User upsert(User user);
+    UserDto createUser(UserDto user);
+    UserDto getUserById(Long id);
+    List<UserDto> getAllUsers();
+    UserDto updateUser(UserDto user);
+    UserDto upsert(UserDto user);
     void deleteUser(Long id);
 }
