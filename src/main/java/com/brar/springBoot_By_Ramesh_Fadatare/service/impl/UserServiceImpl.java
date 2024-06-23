@@ -57,7 +57,7 @@ public class UserServiceImpl implements UserService {
         existingUser.setLastName(user.getLastName());
         existingUser.setEmail(user.getEmailAddress());
         //return mapEntityToDTOUser(userRepository.save(existingUser));
-        //return modelMapper.map(existingUser, UserDto.class);
+        //return modelMapper.map(userRepository.save(existingUser), UserDto.class);
         return MAPPER.mapUserToUserDto(userRepository.save(existingUser));
     }
 
@@ -69,7 +69,7 @@ public class UserServiceImpl implements UserService {
             existingUser.get().setLastName(user.getLastName());
             existingUser.get().setEmail(user.getEmailAddress());
             //return mapEntityToDTOUser(userRepository.save(existingUser.get()));
-            //return modelMapper.map(existingUser.get(), UserDto.class);
+            //return modelMapper.map(userRepository.save(existingUser.get()), UserDto.class);
             return MAPPER.mapUserToUserDto(userRepository.save(existingUser.get()));
         }
         else{
